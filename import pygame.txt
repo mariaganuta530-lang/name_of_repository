@@ -1,0 +1,65 @@
+import pygame
+pygame.init()
+font = pygame.font.SysFont(None, 100)
+
+screen = pygame.display.set_mode((960, 768))
+pygame.display.set_caption("Горы из фигур")
+
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+             
+    screen.fill((0,255,255))
+    pygame.draw.line(screen, (230,230,230), (0,761), (968,761), 900) 
+    pygame.draw.ellipse(screen, (230,230,230), (60, 180, 180, 337)) 
+    pygame.draw.ellipse(screen, (0,0,0), (60, 180, 180, 337),1) 
+    pygame.draw.ellipse(screen, (230,230,230), (157, 415, 144, 100))
+    pygame.draw.ellipse(screen, (0,0,0), (157, 415, 144, 100),1)
+    pygame.draw.ellipse(screen, (230,230,230), (265, 452, 109, 70))
+    pygame.draw.ellipse(screen, (0,0,0), (265, 452, 109, 70),1)
+    pygame.draw.ellipse(screen, (230,230,230), (232, 270, 57, 36))
+    pygame.draw.ellipse(screen, (0,0,0), (232, 270, 57, 36),1)
+    pygame.draw.ellipse(screen, (230,230,230), (152, 121, 113, 75))
+    pygame.draw.ellipse(screen, (0,0,0), (152, 121, 113, 75),1)
+    pygame.draw.circle(screen, (0,0,0), (200,153), 5)  
+    pygame.draw.circle(screen, (0,0,0), (266,156), 5) 
+    pygame.draw.line(screen, (0,0,0), (202,183), (256,175), 1) 
+    pygame.draw.circle(screen, (230,230,230), (168,132), 15)
+    pygame.draw.circle(screen, (0,0,0), (168,132), 15, 1) 
+    pygame.draw.ellipse(screen, (77,77,77), (608, 334, 250, 93))
+    pygame.draw.ellipse(screen, (0,0,0), (608, 334, 250, 93),1)
+    pygame.draw.ellipse(screen, (22,80,68), (663, 369, 143, 50))
+    pygame.draw.ellipse(screen, (0,0,0), (663, 369, 143, 50),1)
+    pygame.draw.line(screen, (0,0,0), (245,308), (655,126), 1) 
+    pygame.draw.line(screen, (0,0,0), (656,127), (685,393), 1) 
+    pygame.draw.ellipse(screen, (191,203,200), (694, 500, 100, 30))
+    pygame.draw.ellipse(screen, (0,0,0), (694, 500, 100, 30),1)
+    pygame.draw.polygon(screen, (221,166,166), [(659,489),(756,481),(763,508)])
+    pygame.draw.polygon(screen, (221,166,166), [(757,525),(768,538),(770,521)])
+    pygame.draw.polygon(screen, (221,166,166), [(716,523),(728,544),(735,522)])
+    pygame.draw.polygon(screen, (191,203,200), [(666,501),(668,530),(698,516)])
+    pygame.draw.circle(screen, (121,121,242), (769,513), 7) 
+    pygame.draw.circle(screen, (0,0,0), (769,513), 3)
+    pygame.draw.line(screen, (161,249,228), (657,15), (657,303), 40) 
+    pygame.draw.line(screen, (161,249,228), (534,159), (813,159), 40)
+    pygame.draw.ellipse(screen, (161,249,228), (535, 24, 281, 281),30)
+    pygame.draw.circle(screen, (255,246,213), (658,160), 23) 
+    pygame.draw.line(screen, (0,0,0), (245,308), (655,126), 1) 
+    pygame.draw.line(screen, (0,0,0), (656,127), (685,393), 1) 
+    
+    
+
+
+
+
+    mx, my = pygame.mouse.get_pos()
+    text = font.render(f"x: {mx}, y: {my}", True, (0, 0, 0))
+    screen.blit(text, (10, 10))
+
+
+    pygame.display.flip()
+    
+
+pygame.quit()
